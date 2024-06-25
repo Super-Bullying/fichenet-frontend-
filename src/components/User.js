@@ -9,7 +9,7 @@ const Usuario = ({ id }) => {
   useEffect(() => {
     const fetchUsuario = async () => {
       try {
-        const response = await axios.get(`http://localhost:3001/api/usuario/jogo/${id}`);
+        const response = await axios.get(`http://localhost:3001/usuario/jogo/${id}`);
         console.log('Dados do Usuario:', response.data); // Log para depuração
         setUsuario(response.data);
         setLoading(false);
