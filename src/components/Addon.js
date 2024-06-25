@@ -9,7 +9,7 @@ const Addon = ({ id }) => {
   useEffect(() => {
     const fetchAddon = async () => {
       try {
-        const response = await axios.get(`http://localhost:3001/api/add_on/jogo/1`);
+        const response = await axios.get(`https://fichenet-1.onrender.com/api/add_on/jogo/${id}`);
         console.log('Dados do Addon:', response.data); // Log para depuração
         setAddon(response.data);
         setLoading(false);
@@ -42,7 +42,6 @@ const Addon = ({ id }) => {
       <p>Preço: {addon.preco_add_on}</p>
       <p>Versão: {addon.versao_add_on}</p>
       <img src={addon.imagem} alt={addon.titulo_add_on} />
-      
     </div>
   );
 };
