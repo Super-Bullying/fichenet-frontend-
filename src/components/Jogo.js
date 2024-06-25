@@ -9,7 +9,7 @@ const Usuario = ({ id }) => {
   useEffect(() => {
     const fetchUsuario = async () => {
       try {
-        const response = await axios.get(`https://fichenet-1.onrender.com/usuario/jogo/${id}`);
+        const response = await axios.get(`https://fichenet-1.onrender.com/api/jogo/compra/${id}`);
         console.log('Dados do Usuario:', response.data); // Log para depuração
         setUsuario(response.data);
         setLoading(false);

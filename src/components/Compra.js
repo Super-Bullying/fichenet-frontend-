@@ -9,7 +9,7 @@ const Compra = ({ id }) => {
   useEffect(() => {
     const fetchCompra = async () => {
       try {
-        const response = await axios.get(`https://fichenet-1.onrender.com/compra/usuario/${id}`);
+        const response = await axios.get(`https://fichenet-1.onrender.com/api/compra/usuario/${id}`);
         console.log('Dados da Compra:', response.data); // Log para depuração
         setCompra(response.data);
         setLoading(false);
